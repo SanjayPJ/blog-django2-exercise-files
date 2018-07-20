@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+          crossorigin="anonymous">
+
+     <title>Posts</title>
+</head>
+
+<body>
+
+     <div class="container mt-2">
+          <div class="jumbotron jumbotron-fluid">
+               <div class="container">
+                    <h1 class="display-4">POSTS</h1>
+                    {% for post in posts %}
+                    <div class="alert alert-secondary" role="alert">
+                         <h2>{{ post.title }}</h2>
+                         <p>{{ post.body }}</p>
+                         <p>{{ post.date }}</p>
+                    </div>
+                    {% endfor %}
+               </div>
+          </div>
+     </div>
+
+</body>
+
+</html>
