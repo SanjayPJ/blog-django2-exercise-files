@@ -1,0 +1,18 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="container py-5">
+          {% for article in articles %}
+          <h4 class="mb-3">
+               <b>
+                    <a class="text-white" href="{% url 'single' slug=article.slug %}">{{ article.title }}</a>
+               </b>
+          </h4>
+          <p class="lead text-justify text-white">{{ article.snippet }}</p>
+          <p class="lead text-justify text-white"><small class="text-muted">{{ article.date }}</small></p>
+          {% endfor %}
+
+     </div>
+
+{% endblock content %}
+     

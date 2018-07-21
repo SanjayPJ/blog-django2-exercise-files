@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+
+<div class="container mt-5">
+     <h2 class="text-white text-center">{{ article.title }}</h2>
+     <p class="text-white text-muted text-center">{{article.date}}</p>
+     <img src="{{ article.thumb.url }}" alt="" class="img-fluid w-100">
+     <p class="read text-white text-justify pt-3">
+          {{article.body}}
+     </p>
+</div>
+
+{% endblock content %}
+     
