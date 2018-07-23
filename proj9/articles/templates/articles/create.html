@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+<h3 class="text-center mt-5 text-white">Create an Awesome New Article</h3>
+
+<div class="container" style="position: relative">
+     <form action="{% url 'create' %}" method="POST" class="text-white" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form }}
+          <br>
+          <button class="mb-5 mt-3 btn btn-primary" >Create</button>
+     </form>
+</div>
+     
+{% endblock content %}
+     

@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+
+<div class="container" style="position: relative;">
+     <form class="text-white pt-4 " name="site-form" action="/accounts/signup/" method="post" style="position: absolute; left: 50%; transform: translateX(-50%);">
+          <h1 class="text-white text-center mt-5"><b>Signup</b></h1>
+          {% csrf_token %}
+          {{ form }} 
+          <br>  
+          <button class="btn btn-success mt-3 px-4" type="submit">Signup</button>
+     </form>
+</div>
+     
+{% endblock content %}
+     
